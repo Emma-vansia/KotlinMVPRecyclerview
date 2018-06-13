@@ -9,7 +9,7 @@ interface ApiService {
 
 
     //http://rjtmobile.com/ansari/fos/fosapp/fos_food_loc.php?city=delhi
-
+	// Hey this was created by Viren..
     @GET("fos_food_loc.php")
     fun getFoodDetails(@Query("city") city: String): Call<FoodList>
 
