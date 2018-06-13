@@ -9,8 +9,9 @@ interface ApiService {
 
 
     //http://rjtmobile.com/ansari/fos/fosapp/fos_food_loc.php?city=delhi
-
+    //purva branch
     @GET("fos_food_loc.php")
     fun getFoodDetails(@Query("city") city: String): Call<FoodList>
+
 
 }
