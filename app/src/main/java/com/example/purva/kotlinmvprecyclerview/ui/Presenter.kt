@@ -20,7 +20,7 @@ class Presenter(internal var context: Context, internal var iView: IView) : IPre
         val apiService = RetrofitInstance.retrofitInstance.create(ApiService::class.java)
         val foodCall = apiService.getFoodDetails("delhi")
         var foodListAdapter: FoodListAdapter? = null
-        foodCall.enqueue(object : Callback<FoodList> {
+        /*foodCall.enqueue(object : Callback<FoodList> {
             override fun onResponse(call: Call<FoodList>, response: Response<FoodList>) {
                 Log.i("response", " " + response.body()!!.Food)
                 foodListAdapter = FoodListAdapter(context, response.body()!!.Food)
@@ -31,7 +31,7 @@ class Presenter(internal var context: Context, internal var iView: IView) : IPre
             override fun onFailure(call: Call<FoodList>, t: Throwable) {
 
 
-            }
+            }*/
         })
 
     }
